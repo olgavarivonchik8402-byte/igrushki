@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
 <title>Taodudu — мир радости и развития</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +36,7 @@
   --shadow-pop:0 22px 50px -16px rgba(60,40,20,0.35);
 }
 *{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;color-scheme:light only;}
 body{
   margin:0;
   font-family:'Nunito Sans', sans-serif;
@@ -279,14 +281,14 @@ nav.main-nav a:hover::after{width:100%;}
 /* ---------- coverflow carousel ---------- */
 .coverflow{position:relative;padding:8px 58px 4px;}
 .cf-viewport{
-  height:460px;perspective:1300px;outline:none;cursor:grab;touch-action:pan-y;
+  height:530px;perspective:1300px;outline:none;cursor:grab;touch-action:pan-y;
   display:flex;align-items:flex-start;justify-content:center;
   overflow:hidden;
 }
 .cf-viewport:active{cursor:grabbing;}
 .cf-viewport:focus-visible{outline:3px solid var(--accent-dark);outline-offset:6px;border-radius:20px;}
 .cf-stage{position:relative;width:100%;height:100%;transform-style:preserve-3d;}
-.cf-card{position:absolute;left:50%;top:0;width:236px;will-change:transform,opacity;}
+.cf-card{position:absolute;left:50%;top:0;width:290px;will-change:transform,opacity;}
 .cf-card .product-card{height:100%;cursor:pointer;}
 .cf-card.cf-center .product-card{cursor:default;}
 .cf-card:not(.cf-center) .product-card:hover{transform:none;}
@@ -302,9 +304,9 @@ nav.main-nav a:hover::after{width:100%;}
 .cf-dot{width:8px;height:8px;border-radius:50%;background:var(--ink);opacity:.25;transition:opacity .2s ease,transform .2s ease;flex-shrink:0;}
 .cf-dot.active{opacity:1;transform:scale(1.35);}
 @media (max-width:640px){
-  .coverflow{padding:8px 46px 4px;}
-  .cf-viewport{height:420px;}
-  .cf-card{width:196px;}
+  .coverflow{padding:8px 40px 4px;}
+  .cf-viewport{height:470px;}
+  .cf-card{width:238px;}
   .cf-nav{width:40px;height:40px;}
 }
 
@@ -455,12 +457,19 @@ footer{background:var(--dark-2);color:#D8CBB8;padding:64px 0 28px;}
   .logo-tag{display:none;}
 
   .hero-full{
-    min-height:0;display:block;padding:0;
+    min-height:0;padding:0;
   }
-  .hero-bg{position:relative;inset:auto;height:340px;}
   .hero-bg-glow{display:none;}
-  .hero-scrim{display:none;}
-  .hero-content{padding:32px 0 0;}
+  .hero-bg img{object-position:68% 38%;}
+  .hero-scrim{
+    background:linear-gradient(180deg,
+      rgba(251,242,228,0) 0%,
+      rgba(251,242,228,0.5) 30%,
+      rgba(251,242,228,0.92) 46%,
+      var(--cream) 60%,
+      var(--cream) 100%);
+  }
+  .hero-content{padding:230px 0 32px;}
   .hero-text{max-width:100%;}
   .hero-text h1{-webkit-text-stroke:6px var(--paper);}
   .hero-text h1 .accent-word{-webkit-text-stroke:6px var(--paper);}
@@ -606,41 +615,8 @@ footer{background:var(--dark-2);color:#D8CBB8;padding:64px 0 28px;}
   </div>
 </section>
 
-<!-- ================= TRUST / ПРЕИМУЩЕСТВА ================= -->
-<section class="section" id="trust">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-tag">Почему выбирают нас</span>
-      <h2>Игрушки, которым доверяют в семье</h2>
-      <p>Мы сами родители и знаем, насколько важно быть уверенным в том, что попадает в руки ребёнку.</p>
-    </div>
-    <div class="trust-grid">
-      <div class="trust-card reveal">
-        <span class="ic" style="background:var(--chip-mint);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:#2E7D4F"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z" stroke="#2E7D4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#2E7D4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <h3>Сертификация и безопасность</h3>
-        <p>Каждая позиция имеет документы о безопасности материалов — можно не переживать за здоровье ребёнка.</p>
-      </div>
-      <div class="trust-card reveal reveal-d1">
-        <span class="ic" style="background:var(--chip-peach);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:#C1622B"><circle cx="12" cy="9" r="5" stroke="#C1622B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 13.5L7 21l5-2.5L17 21l-1.5-7.5" stroke="#C1622B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <h3>Оригинал, а не подделка</h3>
-        <p>Работаем напрямую с производителями Taodudu и Shiny Star — никаких копий и случайных партий.</p>
-      </div>
-      <div class="trust-card reveal reveal-d2">
-        <span class="ic" style="background:var(--chip-sky);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:#1B5FAE"><path d="M12 20s-7-4.4-9.3-9C.9 7.7 3 4 6.5 4c2 0 3.3 1 4 2.2C11.2 5 12.5 4 14.5 4 18 4 20.1 7.7 21.3 11c-2.3 4.6-9.3 9-9.3 9z" stroke="#1B5FAE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <h3>Забота для всей семьи</h3>
-        <p>Понятные описания и честные фото — чтобы бабушке или дедушке было так же просто выбрать подарок, как и родителям.</p>
-      </div>
-      <div class="trust-card reveal reveal-d3">
-        <span class="ic" style="background:var(--chip-lilac);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:#6E4FBF"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z" stroke="#6E4FBF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.6" stroke="#6E4FBF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17.5" cy="18" r="1.6" stroke="#6E4FBF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <h3>Удобная покупка</h3>
-        <p>Заказывайте там, где привыкли — на Wildberries или Ozon, с быстрой доставкой и вашими бонусами.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= ХИТЫ / НОВИНКИ ================= -->
-<section class="section alt" id="hits">
+<section class="section" id="hits">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="section-tag">Выбор покупателей</span>
@@ -669,6 +645,39 @@ footer{background:var(--dark-2);color:#D8CBB8;padding:64px 0 28px;}
         <button class="cf-nav prev" aria-label="Предыдущий товар"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style=""><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <button class="cf-nav next" aria-label="Следующий товар"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style=""><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <div class="cf-dots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST / ПРЕИМУЩЕСТВА ================= -->
+<section class="section alt" id="trust">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-tag">Почему выбирают нас</span>
+      <h2>Игрушки, которым доверяют в семье</h2>
+      <p>Мы сами родители и знаем, насколько важно быть уверенным в том, что попадает в руки ребёнку.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card reveal">
+        <span class="ic" style="background:var(--chip-mint);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:#2E7D4F"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z" stroke="#2E7D4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#2E7D4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Сертификация и безопасность</h3>
+        <p>Каждая позиция имеет документы о безопасности материалов — можно не переживать за здоровье ребёнка.</p>
+      </div>
+      <div class="trust-card reveal reveal-d1">
+        <span class="ic" style="background:var(--chip-peach);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:#C1622B"><circle cx="12" cy="9" r="5" stroke="#C1622B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 13.5L7 21l5-2.5L17 21l-1.5-7.5" stroke="#C1622B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Оригинал, а не подделка</h3>
+        <p>Работаем напрямую с производителями Taodudu и Shiny Star — никаких копий и случайных партий.</p>
+      </div>
+      <div class="trust-card reveal reveal-d2">
+        <span class="ic" style="background:var(--chip-sky);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:#1B5FAE"><path d="M12 20s-7-4.4-9.3-9C.9 7.7 3 4 6.5 4c2 0 3.3 1 4 2.2C11.2 5 12.5 4 14.5 4 18 4 20.1 7.7 21.3 11c-2.3 4.6-9.3 9-9.3 9z" stroke="#1B5FAE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Забота для всей семьи</h3>
+        <p>Понятные описания и честные фото — чтобы бабушке или дедушке было так же просто выбрать подарок, как и родителям.</p>
+      </div>
+      <div class="trust-card reveal reveal-d3">
+        <span class="ic" style="background:var(--chip-lilac);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:#6E4FBF"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z" stroke="#6E4FBF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.6" stroke="#6E4FBF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17.5" cy="18" r="1.6" stroke="#6E4FBF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Удобная покупка</h3>
+        <p>Заказывайте там, где привыкли — на Wildberries или Ozon, с быстрой доставкой и вашими бонусами.</p>
       </div>
     </div>
   </div>
